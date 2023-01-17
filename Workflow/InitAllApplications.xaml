@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>678.6666666666666,504</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>674.6666666666666,702</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="49">
@@ -132,20 +132,45 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="442,316.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="538,637.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="InitApplications" sap:VirtualizedContainerService.HintSize="400,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence DisplayName="InitApplications" sap:VirtualizedContainerService.HintSize="496,550" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="338,104.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+      <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="434,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: Sales Order - Validation" sap:VirtualizedContainerService.HintSize="434,303.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="7d00cc41-fa40-4f12-a97d-b8d70073ad23" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="400,84" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-11, -11, 1942, 1102" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="b89d35b18183ce28efa54111dd1ea229.png" Selector="&lt;html app='firefox.exe' title='Sales Order - Validation' /&gt;" Url="https://developer.automationanywhere.com/challenges/salesorder-challenge.html" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
     </Sequence>
   </Sequence>
 </Activity>

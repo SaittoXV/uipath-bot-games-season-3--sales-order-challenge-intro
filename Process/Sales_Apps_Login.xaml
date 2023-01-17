@@ -1,0 +1,265 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sales_Apps_Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_DT_StatusOrder" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>674.6666666666666,518.6666666666666</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sales_Apps_Login_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="37">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="59">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IPC.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sales_Apps_Login" sap:VirtualizedContainerService.HintSize="538,454" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="496,366.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: Sales Order - Login" sap:VirtualizedContainerService.HintSize="434,53.333333333333336" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" IsIncognito="True" ScopeGuid="537a7747-6a41-43a4-b352-eb4e549ef1a0" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,897.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="password">
+                  <Variable.Default>
+                    <Literal x:TypeArguments="x:String">i7D32S&amp;37K*W</Literal>
+                  </Variable.Default>
+                </Variable>
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Email" EmptyField="True" sap:VirtualizedContainerService.HintSize="358,135.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="True" Text="douglasmcgee@catchycomponents.com">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ccdf31c9-4fac-44a2-9599-e7af96c8aeb1" InformativeScreenshot="eefe45dc1319453c08cc33fb61a45dba" Selector="&lt;webctrl tag='H1' /&gt;&lt;nav up='2' /&gt;&lt;webctrl id='salesOrderInputEmail' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="358,135.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[password]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ccdf31c9-4fac-44a2-9599-e7af96c8aeb1" InformativeScreenshot="76738a426de78dbfb2564b732634825a" Selector="&lt;webctrl tag='H1' /&gt;&lt;nav up='2' /&gt;&lt;webctrl id='salesOrderInputPassword' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Login" sap:VirtualizedContainerService.HintSize="358,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e0990447-9d06-4070-b786-1191eb055283" InformativeScreenshot="860cbfebd4e495b4c36f679e12b508fe" Selector="&lt;webctrl class='small' tag='A' /&gt;&lt;nav up='3' /&gt;&lt;webctrl tag='A' idx='1' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Sales Order Tab" sap:VirtualizedContainerService.HintSize="358,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dbf1038e-05d1-495a-b0f9-a9948801cc32" InformativeScreenshot="c5407837b5627317fdce82069c5658f8" Selector="&lt;webctrl aaname='                          Sales Order           ' class='nav-link' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Column-0' ReferenceName='Column-0' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='SO Number' ReferenceName='SO Number' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Customer Name' ReferenceName='Customer Name' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Order Date' ReferenceName='Order Date' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Order Status' ReferenceName='Order Status' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Expected Ship Date' ReferenceName='Expected Ship Date' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Delivery Method' ReferenceName='Delivery Method' ReferenceIdx='6'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='text' /&gt;&lt;column name='SO Number' attr='text' /&gt;&lt;column name='Customer Name' attr='text' /&gt;&lt;column name='Order Date' attr='text' /&gt;&lt;column name='Order Status' attr='text' /&gt;&lt;column name='Expected Ship Date' attr='text' /&gt;&lt;column name='Delivery Method' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="358,159.33333333333334" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="537a7747-6a41-43a4-b352-eb4e549ef1a0" Version="V3">
+                <uix:NExtractData.NextLink>
+                  <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/salesorder-applist.html" DesignTimeRectangle="1805, 896, 73, 45" DesignTimeScaleFactor="1.2000000476837158" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl parentid='salesOrderDataTable_next' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='salesOrderDataTable_next' tag='A' type='' class='page-link' aaname='Next' check:innerText='Next' /&gt;" Guid="e48b6c4c-dbff-475e-a6c2-24400bec9317" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAxCAYAAACf6SQKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOSSURBVGhD7ZvPTxNBFMf5C0kaI+GkXkhMPKAxWAkh1hgiMYrGRlFDY0g86MVgOBExkYNEjBcImmBE+2tboLQFtLbQlq/v7UyXaSnQjhZSfZ9kDp2ZXXY++2besNntgNA0Is2CjuXvKUhR5Vs4hUgsg7X1H8gXitjd1ZZq8CKND/rf2SVLOzslbGz+InlpZLI5lMv7zYm0A2B5yeSmK6424kTaIbA4jjieqiYi7Qh4qvIaZyLSjkBFW0b/Uoi0I+DkwFnVRKQ1QK0bkdYAIs0CkWaBSLNApFkg0iwQaRa0TlpsDT2Xv6OzP4GpLV1Xy1wCndSnZyKnK9qD1kuj0v04i6yuruK4pKU38CiUxNDrn7riz2i5NF8fi4sgMLejGwyOS1rlBtLN+xu0PtLuObjC4gaSmKl1I9JqMC50/nlUTdOxDVQ9VDlQWhmpxXVcG47gFJ+DyunrcYzM5rH3JCuPF7e5LUxRbDzfymUR6Kf6PgeveC3Vf6O6JPBG9bbiWKSh9APBAF9sBDc+GgOsK62ML5MxV5bvahQXR2ktGo3jjF8N+Pyk0XdtHb1uFK/gfYkryng/HnH79U7l3S74msbQwxi6+FoCcQzx2hZK45NqteJ4pBHFpVWc5d/eAIl60vRxnDxSlX7M9hbusvj+JN4Z9csk2KfPUQyrY303U1jW7S7tOD0V5b1pOr6pplkdafPPVaScHeGIqC6X3GiNIhTTnZlSDk+GqL4vhgs3VfuTcFk3atpXGmFM01sLNLA60t485vbDCkvRnTVeFFPpeUkRp+s92loaUVxYQTfXB1YxP3uQtAiCS7qiAbJ0HnfNotI1WmdP2O7SqhbroOMO1pS2PKGmsFl3KFtZDHK2pC3Ng6d83jp7wsq1kNB9UWjBCUgjSpu4NUBtlPkqi7hHJSPSGhX8XD34gpPGw2lTZhEzYywqjMFZ6msIrNoTlmgbwuc87F+6JjgZaYQ3TWulEVla61RbGN3DjpsE/JU9mz+B6YLqVzmH737Gm5LOVNy9EV6ycdmL7k5/FP7QGt6mdZMFJybNHEi9qVhwMhi5E8VpjhDqc2qA9mzP0ljM6szoRWsM42Y2RQ4hzqaUMIJLRhYtbePDhINzV1VbVQZuktZJ+4cRaRaINAtEmgUizQKRZoFIs0CkWSDSLBBpFoi0JpGX+iyQ10ctkBeVm0ReiW8S+fiiQRr+zIdlSVGl6Q/KhEYBfgPi3F5bk4SdFgAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Sales Order - List' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NExtractData.NextLink>
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="334, 473, 1544, 647" DesignTimeScaleFactor="1.2000000476837158" FriendlyName="'SO NumberCustomer'" FullSelectorArgument="&lt;webctrl id='salesOrderDataTable' tag='TABLE' /&gt;" Guid="ad159d06-b6f9-4e53-b2be-ce0a0fd90b50" InformativeScreenshot="2a8411653e13a7123f2872f0abd7e18d.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Sales Order - List' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-11, -11, 1942, 1102" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="ef09e578aaf6f4b351e29837141b65e8.png" Selector="&lt;html app='firefox.exe' title='Sales Order - Login' /&gt;" Url="https://developer.automationanywhere.com/challenges/salesorder-applogin.html" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table &quot;Confirmed&quot; &amp; &quot;Delivery Outstanding&quot;" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="434,162.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_DT_StatusOrder]" SelectColumnsMode="Keep">
+        <ui:FilterDataTable.Filters>
+          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+            <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTCONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["Order Status"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Confirmed"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTCONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["Order Status"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Delivery Outstanding"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+          </scg:List>
+        </ui:FilterDataTable.Filters>
+        <ui:FilterDataTable.SelectColumns>
+          <scg:List x:TypeArguments="InArgument" Capacity="4">
+            <x:Null />
+          </scg:List>
+        </ui:FilterDataTable.SelectColumns>
+      </ui:FilterDataTable>
+    </Sequence>
+  </Sequence>
+</Activity>
