@@ -3,15 +3,15 @@ Validating orders is a time-consuming process for Catchy Components. They desper
 
 For each order with a status of “Confirmed” or “Delivery Outstanding” - the bot needs to expand the order by clicking the “+” button
 
-    For each item included in the order, the bot needs to perform a lookup in the tracking details in the Global Express tracking website – the world’s premier fictitious shipping provider
-    If the status for all items is “Delivered” - the bot needs to click the “Generate Invoice” button for the entire order
-    If one or more items from the order are not yet delivered, no action should be taken on this order.
+    * For each item included in the order, the bot needs to perform a lookup in the tracking details in the Global Express tracking website – the world’s premier fictitious shipping provider
+    * If the status for all items is “Delivered” - the bot needs to click the “Generate Invoice” button for the entire order
+    * If one or more items from the order are not yet delivered, no action should be taken on this order.
 
 Once all orders have been checked, the bot should click the “Export” button in the top right corner of the Sales Order app to generate a sales order report that should be uploaded in the Sales validation section of the challenge page. Challenge Page URL: https://developer.automationanywhere.com/challenges/salesorder-challenge.html
 
 ![image](https://user-images.githubusercontent.com/68688545/212867743-36d72aef-2614-4903-ab5a-c3ec217e37db.png)
 
-#Rules
+# Rules
 
  
 
