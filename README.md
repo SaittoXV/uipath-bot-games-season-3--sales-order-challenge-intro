@@ -1,4 +1,4 @@
-# uipath-bot-games-season-3--sales-order-challenge-intro
+## uipath-bot-games-season-3--sales-order-challenge-intro
 Validating orders is a time-consuming process for Catchy Components. They desperately need a bot to automate the process of validating orders to improve their customer experience and send invoices out in a timely fashion. The Bot must start by launching the challenge page. From there, the bot needs to launch the organization's sales order application, and navigate to the Sales Order tab, and start validating orders.
 
 For each order with a status of “Confirmed” or “Delivery Outstanding” - the bot needs to expand the order by clicking the “+” button
@@ -18,21 +18,21 @@ Once all orders have been checked, the bot should click the “Export” button 
 For your submission to be valid, you must launch the challenge page and all subsequent apps from the challenge page. No pre-caching data, no uploading a previously created CSV.
 
  
-#Sharing Your Results
+# Sharing Your Results
 
  
 
 Once you’ve successfully completed the challenge, share a screenshot of your results on social using the hashtags #BotGames and tag 3 other RPA developers who you challenge to complete this exercise. We want to celebrate your accomplishment as well, so our team will be looking for individuals who share their results on social media (and tag/challenge others) to reward them with limited edition Bot Games swag. Share your feedback as well! We want to hear what you liked and what frustrated you about this challenge! Share some tips with your fellow developers as well!
 
  
-#Generating your Certificate
+# Generating your Certificate
 
  
 
 Knocked this one out? Awesome – Download your Sales Order Validation Challenge completion certificate from our Challenge Page Validation app. Just fill in one of your success GUIDs from this challenge along with your name, email, and company name, and you can show off that you nailed this one!!
 
  
-#Conclusion
+# Conclusion
 
  
 
