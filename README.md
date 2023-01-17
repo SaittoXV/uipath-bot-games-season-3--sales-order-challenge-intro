@@ -1,0 +1,2 @@
+# uipath-bot-games-season-3--sales-order-challenge-intro
+Validating orders is a time-consuming process for Catchy Components. They desperately need a bot to automate the process of validating orders to improve their customer experience and send invoices out in a timely fashion. The Bot must start by launching the challenge page. From there, the bot needs to launch the organization's sales order application, and navigate to the Sales Order tab, and start validating orders.
